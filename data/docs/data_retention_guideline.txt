@@ -1,0 +1,17 @@
+Data Retention Guideline (sample public-services guideline, synthetic)
+
+Financial records are retained for seven years from the end of the fiscal year in which they were created.
+
+Employee personnel files are retained for five years after the employee separates from the organisation.
+
+Routine email is retained for three years and is then permanently deleted.
+
+Access logs for internal systems are retained for 12 months.
+
+All backups are encrypted with AES-256 and stored in a separate geographic region from the primary data.
+
+Data classified as Restricted requires approval from the Data Protection Officer before it is shared externally.
+
+Deletion requests from citizens must be answered within 30 days of receipt.
+
+Exceptions to retention periods are granted only by the Records Committee, and only for an active legal hold.

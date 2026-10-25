@@ -1,0 +1,15 @@
+Remote Work Policy (sample public-services policy, synthetic)
+
+Employees may work remotely up to three days per week with manager approval. Remote work requests must be submitted at least five working days in advance.
+
+Core collaboration hours are 10:00 to 15:00 local time, during which employees must be reachable by chat or phone.
+
+Each remote employee receives a one-time home office stipend of USD 400. Receipts must be submitted within 30 days of purchase.
+
+Company laptops must use full-disk encryption and connect through the corporate VPN when accessing internal systems.
+
+Employees who wish to work from a different country need written approval from both HR and Legal before travelling.
+
+Any damage to company equipment must be reported to IT within 48 hours of discovery.
+
+Performance of remote employees is assessed on outcomes delivered, not on hours spent online.

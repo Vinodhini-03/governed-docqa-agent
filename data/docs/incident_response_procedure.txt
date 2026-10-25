@@ -1,0 +1,17 @@
+Incident Response Procedure (sample public-services procedure, synthetic)
+
+Any security incident must be reported to the Security Operations Center within one hour of discovery.
+
+Incidents are classified into four severity levels, from Sev1 (critical) to Sev4 (low).
+
+For Sev1 incidents an incident commander must be assigned within 15 minutes of the report.
+
+Only the Communications Office may issue public statements about an incident.
+
+Affected citizens must be notified within 72 hours of a confirmed personal data breach.
+
+Evidence such as disk images and logs must be preserved in write-once storage.
+
+A post-incident review must be held within five business days of resolution.
+
+The on-call rotation changes every Monday at 09:00.
