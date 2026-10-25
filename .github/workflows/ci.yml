@@ -33,7 +33,7 @@ jobs:
 
   deploy:
     needs: [test, docker]
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' && vars.AZURE_FUNCTIONAPP_NAME != ''
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

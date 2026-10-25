@@ -13,7 +13,7 @@ See [docs/architecture.md](docs/architecture.md) for the diagram.
 | Chunking, retrieval, citations, guardrails, RBAC, approval flow, audit log | Built and tested locally (10 automated tests) |
 | Golden-set evaluation + CI threshold gate | Built; runs locally and in CI |
 | Azure Document Intelligence, Azure AI Search, Azure OpenAI, Key Vault, Functions, App Insights, Groq/Ollama | Code written; not yet run against live services |
-| GitHub Actions workflow | Written; update this row after the first run |
+| GitHub Actions workflow | GitHub Actions workflow | Lint, tests, evaluation gate and Docker build pass in CI; deploy job activates once the Azure Function App is configured |
 
 The default configuration runs fully offline: a local hybrid index (BM25 + hashed vectors), an extractive
 answerer instead of an LLM, and pypdf for PDFs. Azure services and LLM providers are switched on with
