@@ -3,9 +3,11 @@ import os
 import re
 
 import httpx
+import time
 
 from app.config import get_settings, secret
 from app.textutil import tokens
+
 
 SYSTEM = (
     "You answer questions using ONLY the numbered context passages. Cite every claim with its passage "
@@ -36,9 +38,15 @@ def _extractive(question: str, contexts: list[str]) -> str:
 
 
 def _openai_style(url: str, headers: dict, body: dict) -> str:
-    r = httpx.post(url, headers=headers, json=body, timeout=60)
-    r.raise_for_status()
-    return r.json()["choices"][0]["message"]["content"].strip()
+    for attempt in range(6):
+        r = httpx.post(url, headers=headers, json=body, timeout=60)
+        if r.status_code == 429 and attempt < 5:
+            time.sleep(min(float(r.headers.get("retry-after", 5 * (attempt + 1))), 60))
+            continue
+        if r.status_code >= 400:
+            raise RuntimeError(f"LLM request failed ({r.status_code}): {r.text[:300]}")
+        return r.json()["choices"][0]["message"]["content"].strip()
+    raise RuntimeError("LLM request failed after retries")
 
 
 def generate(question: str, contexts: list[str]) -> str:

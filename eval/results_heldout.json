@@ -1,0 +1,12 @@
+{
+  "metrics": {
+    "recall_at_5": 1.0,
+    "citation_accuracy": 1.0,
+    "faithfulness": 0.85,
+    "refusal_accuracy": 1.0,
+    "latency_p50_ms": 948.6,
+    "latency_p95_ms": 6477.9,
+    "n_questions": 13
+  },
+  "failures": []
+}

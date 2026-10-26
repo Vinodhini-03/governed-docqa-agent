@@ -16,6 +16,7 @@ import re
 import statistics
 import sys
 import tempfile
+import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -63,6 +64,7 @@ def main() -> int:
     store.add(ingest_path(DOCS))
     rows = [json.loads(x) for x in GOLDEN.read_text(encoding="utf-8").splitlines() if x.strip()]
     rec, cit, fth, ref, lat, fails = [], [], [], [], [], []
+    time.sleep(float(os.getenv("EVAL_DELAY", "0")))
     for r in rows:
         res = rag.answer(r["question"], "eval")
         lat.append(res["latency_ms"])

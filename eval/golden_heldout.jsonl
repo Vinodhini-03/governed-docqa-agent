@@ -1,0 +1,13 @@
+{"question": "Which organization developed the framework used to classify AI lifecycle activities by dimension?", "source": "NIST.AI.100-1.pdf", "phrase": "OECD has developed a framework for classifying", "in_scope": true}
+{"question": "What style of language should the AI RMF use according to Appendix D?", "source": "NIST.AI.100-1.pdf", "phrase": "clear and plain language that is understandable by a broad audience", "in_scope": true}
+{"question": "Why might a model developer and a deployer see risk differently?", "source": "NIST.AI.100-1.pdf", "phrase": "different risk perspective than an AI actor", "in_scope": true}
+{"question": "What problem can come from trying to eliminate all negative risk?", "source": "NIST.AI.100-1.pdf", "phrase": "can be counterproductive in practice", "in_scope": true}
+{"question": "What is needed for risk management of AI that replaces human decision making?", "source": "NIST.AI.100-1.pdf", "phrase": "requires some form of baseline metrics for comparison", "in_scope": true}
+{"question": "What can AI systems do to existing biases?", "source": "NIST.AI.100-1.pdf", "phrase": "increase the speed and scale of biases", "in_scope": true}
+{"question": "How often does NIST plan to update the Playbook?", "source": "NIST.AI.100-1.pdf", "phrase": "plans to update the AI RMF Playbook frequently", "in_scope": true}
+{"question": "What does the People and Planet dimension represent?", "source": "NIST.AI.100-1.pdf", "phrase": "represents human rights and the broader", "in_scope": true}
+{"question": "What does MEASURE 2.4 say about monitoring in production?", "source": "NIST.AI.100-1.pdf", "phrase": "are monitored when in production", "in_scope": true}
+{"question": "What should MANAGE 2.4 mechanisms allow for systems that perform inconsistently with intended use?", "source": "NIST.AI.100-1.pdf", "phrase": "supersede, disengage, or deactivate AI systems", "in_scope": true}
+{"question": "What is the penalty for not following the AI RMF?", "source": null, "phrase": null, "in_scope": false}
+{"question": "Which vendor sells AI RMF compliance software?", "source": null, "phrase": null, "in_scope": false}
+{"question": "How do I install the Playbook on Windows?", "source": null, "phrase": null, "in_scope": false}
