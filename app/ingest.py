@@ -1,10 +1,14 @@
 """Extraction (Document Intelligence or local fallback) and chunking."""
+import re
 from dataclasses import dataclass
 from pathlib import Path
 
 from app.config import get_settings
 
 
+def _dehyphenate(text: str) -> str:
+    """Rejoin words split across lines with a hyphen (e.g. 'Manage-\\nment' -> 'Management')."""
+    return re.sub(r"(?<=[A-Za-z])-\s*\n\s*(?=[a-z])", "", text)
 @dataclass
 class Page:
     source: str
@@ -44,9 +48,10 @@ def extract(path: Path) -> list[Page]:
     s = get_settings()
     if path.suffix.lower() == ".pdf":
         if s.docintel_endpoint and s.docintel_key:
-            return _docintel_pages(path)
-        return _pypdf_pages(path)
-    return [Page(path.name, 1, path.read_text(encoding="utf-8"))]
+            pages = _docintel_pages(path)
+        else:
+            pages = _pypdf_pages(path)
+        return [Page(p.source, p.page, _dehyphenate(p.text)) for p in pages]
 
 
 def chunk_pages(pages: list[Page], size: int = 700, overlap: int = 100) -> list[Chunk]:

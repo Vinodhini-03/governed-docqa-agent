@@ -1,0 +1,74 @@
+{
+  "metrics": {
+    "recall_at_5": 0.633,
+    "citation_accuracy": 0.552,
+    "faithfulness": 1.0,
+    "refusal_accuracy": 0.875,
+    "latency_p50_ms": 17.1,
+    "latency_p95_ms": 20.1,
+    "n_questions": 38
+  },
+  "failures": [
+    {
+      "q": "How does the AI RMF define risk?",
+      "why": "recall=False citation=False"
+    },
+    {
+      "q": "Does the framework say what risk tolerance an organization should have?",
+      "why": "recall=True citation=False"
+    },
+    {
+      "q": "What do the letters in TEVV stand for?",
+      "why": "wrongly refused",
+      "retrieved_ok": false
+    },
+    {
+      "q": "Which function is described as cross-cutting?",
+      "why": "recall=True citation=False"
+    },
+    {
+      "q": "What is the purpose of the MAP function?",
+      "why": "recall=False citation=False"
+    },
+    {
+      "q": "How do resilience and security differ?",
+      "why": "recall=False citation=False"
+    },
+    {
+      "q": "What question can explainability answer?",
+      "why": "recall=False citation=False"
+    },
+    {
+      "q": "What risk response options are listed for high-priority risks?",
+      "why": "recall=False citation=False"
+    },
+    {
+      "q": "How does the framework define an AI system?",
+      "why": "recall=False citation=False"
+    },
+    {
+      "q": "Which law directed NIST to develop the AI RMF?",
+      "why": "recall=True citation=False"
+    },
+    {
+      "q": "When should AI systems be tested according to the MEASURE function?",
+      "why": "recall=False citation=False"
+    },
+    {
+      "q": "Why can lab measurements of AI risk be misleading?",
+      "why": "recall=False citation=False"
+    },
+    {
+      "q": "Which NIST guidance is mentioned as applicable to AI security?",
+      "why": "recall=False citation=False"
+    },
+    {
+      "q": "What does GOVERN 2.3 say about executive leadership?",
+      "why": "recall=False citation=False"
+    },
+    {
+      "q": "Which GPU is best for training large language models?",
+      "why": "should have refused"
+    }
+  ]
+}
