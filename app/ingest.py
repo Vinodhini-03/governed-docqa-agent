@@ -52,7 +52,7 @@ def extract(path: Path) -> list[Page]:
         else:
             pages = _pypdf_pages(path)
         return [Page(p.source, p.page, _dehyphenate(p.text)) for p in pages]
-
+    return [Page(path.name, 1, path.read_text(encoding="utf-8"))]
 
 def chunk_pages(pages: list[Page], size: int = 700, overlap: int = 100) -> list[Chunk]:
     """Paragraph-aware chunking: pack paragraphs up to `size` chars, carry `overlap` chars forward."""

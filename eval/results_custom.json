@@ -4,8 +4,8 @@
     "citation_accuracy": 0.759,
     "faithfulness": 1.0,
     "refusal_accuracy": 0.875,
-    "latency_p50_ms": 16.8,
-    "latency_p95_ms": 20.0,
+    "latency_p50_ms": 16.9,
+    "latency_p95_ms": 28.3,
     "n_questions": 38
   },
   "failures": [
