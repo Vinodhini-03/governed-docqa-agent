@@ -1,11 +1,11 @@
 {
   "metrics": {
-    "recall_at_5": 0.833,
-    "citation_accuracy": 0.759,
+    "recall_at_5": 0.9,
+    "citation_accuracy": 0.724,
     "faithfulness": 1.0,
     "refusal_accuracy": 0.875,
-    "latency_p50_ms": 16.9,
-    "latency_p95_ms": 28.3,
+    "latency_p50_ms": 27.1,
+    "latency_p95_ms": 40.5,
     "n_questions": 38
   },
   "failures": [
@@ -24,7 +24,7 @@
     },
     {
       "q": "What is the purpose of the MAP function?",
-      "why": "recall=False citation=False"
+      "why": "recall=True citation=False"
     },
     {
       "q": "How does the framework define an AI system?",
@@ -36,7 +36,11 @@
     },
     {
       "q": "Why can lab measurements of AI risk be misleading?",
-      "why": "recall=False citation=False"
+      "why": "recall=True citation=False"
+    },
+    {
+      "q": "What tradeoff can arise between accuracy and another characteristic?",
+      "why": "recall=True citation=False"
     },
     {
       "q": "Which NIST guidance is mentioned as applicable to AI security?",
