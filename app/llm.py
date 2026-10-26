@@ -1,13 +1,12 @@
 """Provider layer: swap the LLM via LLM_PROVIDER without touching the workflow."""
 import os
 import re
+import time
 
 import httpx
-import time
 
 from app.config import get_settings, secret
 from app.textutil import tokens
-
 
 SYSTEM = (
     "You answer questions using ONLY the numbered context passages. Cite every claim with its passage "
