@@ -1,12 +1,32 @@
 {
   "metrics": {
-    "recall_at_5": 1.0,
-    "citation_accuracy": 1.0,
-    "faithfulness": 0.85,
+    "recall_at_5": 0.9,
+    "citation_accuracy": 0.963,
+    "faithfulness": 0.926,
     "refusal_accuracy": 1.0,
-    "latency_p50_ms": 948.6,
-    "latency_p95_ms": 6477.9,
-    "n_questions": 13
+    "latency_p50_ms": 5203.6,
+    "latency_p95_ms": 8801.9,
+    "n_questions": 38
   },
-  "failures": []
+  "failures": [
+    {
+      "q": "How does the AI RMF define risk?",
+      "why": "wrongly refused",
+      "retrieved_ok": false
+    },
+    {
+      "q": "What do the letters in TEVV stand for?",
+      "why": "wrongly refused",
+      "retrieved_ok": false
+    },
+    {
+      "q": "How does the framework define an AI system?",
+      "why": "wrongly refused",
+      "retrieved_ok": false
+    },
+    {
+      "q": "Why can lab measurements of AI risk be misleading?",
+      "why": "recall=True citation=False"
+    }
+  ]
 }
